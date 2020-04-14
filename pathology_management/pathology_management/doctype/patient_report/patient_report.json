@@ -1,0 +1,128 @@
+{
+ "autoname": "patient_name",
+ "creation": "2020-04-01 13:07:04.482795",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "patient",
+  "patient_name",
+  "column_break_3",
+  "mobile",
+  "email_id",
+  "section_break_6",
+  "sample_id",
+  "get_sample_test",
+  "column_break_9",
+  "doctor",
+  "doctor_name",
+  "section_break_11",
+  "tests",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Patient",
+   "options": "Patient",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "patient.patient_name",
+   "fieldname": "patient_name",
+   "fieldtype": "Read Only",
+   "label": "Patient Name"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "mobile",
+   "fieldtype": "Data",
+   "label": "Mobile"
+  },
+  {
+   "fieldname": "email_id",
+   "fieldtype": "Data",
+   "label": "Email Id"
+  },
+  {
+   "fieldname": "section_break_6",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "sample_id",
+   "fieldtype": "Link",
+   "label": "Sample Id",
+   "options": "Patient Sample"
+  },
+  {
+   "fieldname": "get_sample_test",
+   "fieldtype": "Button",
+   "label": "Get Sample Test",
+   "options": "get_sample_test_details"
+  },
+  {
+   "fieldname": "column_break_9",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "doctor.doctor_name",
+   "fieldname": "doctor_name",
+   "fieldtype": "Read Only",
+   "in_list_view": 1,
+   "label": "Doctor Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_11",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "options": "Patient Report"
+  },
+  {
+   "fieldname": "tests",
+   "fieldtype": "Table",
+   "label": "Test",
+   "options": "Test"
+  },
+  {
+   "fieldname": "doctor",
+   "fieldtype": "Link",
+   "label": "Doctor",
+   "options": "Doctor"
+  }
+ ],
+ "is_submittable": 1,
+ "modified": "2020-04-02 11:02:44.806417",
+ "modified_by": "Administrator",
+ "module": "Pathology Management",
+ "name": "Patient Report",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "patient_name",
+ "track_changes": 1
+}
